@@ -1,0 +1,16 @@
+name: SidebarManager
+version: 1.1
+author: Luck
+main: me.lucko.sidebarmanager.SidebarPlugin
+commands:
+  sidebar:
+    description: Change current sidebar
+    usage: /sidebar
+    aliases: [scoreboard, sb, toggletb, togglesidebar]
+permissions:
+  sidebarmanager.change:
+    description: Permission needed to change current sidebar
+    defualt: op
+  sidebarmanager.reload:
+    description: Permission needed to reload the config
+    defualt: op

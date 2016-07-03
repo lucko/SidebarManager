@@ -1,0 +1,6 @@
+# SidebarManager Configuration
+
+# How many ticks to wait between refreshing the sidebars
+# 20 = refresh once every second
+# Minimum value is 2
+refresh-ticks: 10
