@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.lucko.sidebarmanager</groupId>
+    <groupId>me.lucko</groupId>
     <artifactId>sidebarmanager</artifactId>
     <version>1.1</version>
     <packaging>jar</packaging>
@@ -21,7 +21,7 @@
         <resources>
             <resource>
                 <targetPath>.</targetPath>
-                <filtering>false</filtering>
+                <filtering>true</filtering>
                 <directory>${basedir}/src/main/resources/</directory>
                 <includes>
                     <include>*.*</include>
@@ -32,7 +32,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.4</version>
+                <version>2.5.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -60,7 +60,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.8</version>
+            <version>1.16.10</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

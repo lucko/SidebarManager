@@ -76,7 +76,7 @@ You can add SidebarManager as a Maven dependency by adding the following to your
 
 <dependencies>
     <dependency>
-        <groupId>me.lucko.sidebarmanager</groupId>
+        <groupId>me.lucko</groupId>
         <artifactId>sidebarmanager</artifactId>
         <version>1.1</version>
     </dependency>
