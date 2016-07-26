@@ -1,5 +1,9 @@
-# SidebarManager
+# SidebarManager [![Build Status](https://ci.lucko.me/job/SidebarManager/badge/icon)](https://ci.lucko.me/job/SidebarManager/)
 A simple scoreboard manager plugin.
+
+## Links
+* **Development Builds** - <https://ci.lucko.me/job/SidebarManager/>
+* **Javadocs** - <https://ci.lucko.me/job/SidebarManager/javadoc/>
 
 ## Configuration
 The config file allows you to change the refresh interval of the scoreboard.
@@ -60,6 +64,24 @@ public class SimpleSidebar extends Sidebar {
     }
 }
 ```
+
+You can add SidebarManager as a Maven dependency by adding the following to your projects `pom.xml`.
+````xml
+<repositories>
+    <repository>
+        <id>luck-repo</id>
+        <url>https://ci.lucko.me/plugin/repository/everything/</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>me.lucko.sidebarmanager</groupId>
+        <artifactId>sidebarmanager</artifactId>
+        <version>1.1</version>
+    </dependency>
+</dependencies>
+````
 
 ## Commands
 ##### /sidebar
