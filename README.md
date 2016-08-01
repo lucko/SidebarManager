@@ -70,7 +70,7 @@ You can add SidebarManager as a Maven dependency by adding the following to your
 <repositories>
     <repository>
         <id>luck-repo</id>
-        <url>https://ci.lucko.me/plugin/repository/everything/</url>
+        <url>https://repo.lucko.me/</url>
     </repository>
 </repositories>
 
