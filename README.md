@@ -2,8 +2,8 @@
 A simple scoreboard manager plugin.
 
 ## Links
-* **Development Builds** - <https://ci.lucko.me/job/SidebarManager/>
-* **Javadocs** - <https://ci.lucko.me/job/SidebarManager/javadoc/>
+* **Development Builds** - <https://ci.lucko.me/job/SidebarManager>
+* **Javadocs** - <https://jd.lucko.me/SidebarManager>
 
 ## Configuration
 The config file allows you to change the refresh interval of the scoreboard.
