@@ -44,8 +44,8 @@ player.sendMessage("You are using the sidebar: " + api.getActiveSidebar(player).
 
 Making your own sidebar is quite easy. Just extend **Sidebar**.
 ```java
-import me.lucko.sidebarmanager.core.Scoreboard;
-import me.lucko.sidebarmanager.core.Sidebar;
+import me.lucko.sidebarmanager.Scoreboard;
+import me.lucko.sidebarmanager.Sidebar;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
@@ -78,17 +78,12 @@ You can add SidebarManager as a Maven dependency by adding the following to your
     <dependency>
         <groupId>me.lucko</groupId>
         <artifactId>sidebarmanager</artifactId>
-        <version>1.1</version>
+        <version>2.0</version>
     </dependency>
 </dependencies>
 ````
 
 ## Commands
-##### /sidebar
-Permission: sidebarmanager.change
-* Opens a GUI window, where the user can select which sidebar they want to use.
-* Allows users to also hide the sidebar completely.
-
 ##### /sidebar reload
 Permission: sidebarmanager.reload
 * Reschedules the update tasks using the up-to-date value in the config.

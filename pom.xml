@@ -6,13 +6,24 @@
 
     <groupId>me.lucko</groupId>
     <artifactId>sidebarmanager</artifactId>
-    <version>1.1</version>
+    <version>2.0</version>
     <packaging>jar</packaging>
     <name>SidebarManager</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>luck-snapshots</id>
+            <url>https://nexus.lucko.me/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>luck-releases</id>
+            <url>https://nexus.lucko.me/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <defaultGoal>clean package</defaultGoal>

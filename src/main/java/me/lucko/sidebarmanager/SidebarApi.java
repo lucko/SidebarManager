@@ -1,13 +1,11 @@
-package me.lucko.sidebarmanager.api;
+package me.lucko.sidebarmanager;
 
-import me.lucko.sidebarmanager.core.Sidebar;
 import org.bukkit.entity.Player;
 
 import java.util.List;
 import java.util.Set;
 
-@SuppressWarnings("unused")
-public interface ISidebarApi {
+public interface SidebarApi {
 
     /**
      * Registers a sidebar within the manager and creates a new instance
@@ -56,7 +54,6 @@ public interface ISidebarApi {
      */
     void forceDefaultSidebar();
 
-
     /**
      * Gets a players active sidebar
      * @param player the player whose sidebar to get
@@ -80,11 +77,5 @@ public interface ISidebarApi {
      * @return a {@link Sidebar} instance
      */
     Sidebar getSidebarInstance(Class<? extends Sidebar> sidebar);
-
-    /**
-     * Show the sidebar selection menu to a player
-     * @param player the player to show the menu to
-     */
-    void showSidebarMenu(Player player);
 
 }

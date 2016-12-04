@@ -1,8 +1,10 @@
-package me.lucko.sidebarmanager.core;
+package me.lucko.sidebarmanager;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import me.lucko.utils.Util;
+import lombok.ToString;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -11,43 +13,42 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-@SuppressWarnings({"unused", "WeakerAccess"})
+import static me.lucko.sidebarmanager.SidebarPlugin.color;
+
+@Getter
+@ToString(of = "name")
+@EqualsAndHashCode(of = "name")
 public abstract class Sidebar {
 
     /**
      * The name of the sidebar
      */
-    @Getter
     private final String name;
 
     /**
      * The icon that represents this sidebar
      */
-    @Getter
     private final Material icon;
 
     /**
      * A map of all of the users who are viewing this sidebar, and their corresponding scoreboard instances
      */
-    @Getter
     private final Map<UUID, Scoreboard> activeScoreboards;
 
-    @Getter
-    @Setter
     /**
      * The permission needed to switch to this sidebar
      */
+    @Setter
     private String requiredPermission = null;
 
     /**
      * The default title of the scoreboard
      */
-    @Getter
     private final String title;
 
     public Sidebar(String name, String title, Material icon, String requiredPermission) {
         this.name = name;
-        this.title = Util.color(title);
+        this.title = color(title);
         this.icon = icon;
         this.requiredPermission = requiredPermission;
 
@@ -103,17 +104,5 @@ public abstract class Sidebar {
 
     public boolean canUse(Player player) {
         return requiredPermission == null || requiredPermission.equals("") || player.hasPermission(requiredPermission);
-    }
-
-    public String toString() {
-        return name;
-    }
-
-    public int hashCode() {
-        return name.hashCode();
-    }
-
-    public boolean equals(Object obj) {
-        return obj instanceof Sidebar && name.equals(((Sidebar) obj).getName());
     }
 }

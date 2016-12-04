@@ -1,9 +1,10 @@
-package me.lucko.sidebarmanager.core;
+package me.lucko.sidebarmanager;
+
+import lombok.Getter;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
-import lombok.Getter;
-import me.lucko.utils.Util;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -12,10 +13,17 @@ import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Score;
 import org.bukkit.scoreboard.Team;
 
-import java.util.*;
+import java.util.AbstractMap;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-@SuppressWarnings({"WeakerAccess", "unused"})
+import static me.lucko.sidebarmanager.SidebarPlugin.color;
+
 public class Scoreboard {
 
     @Getter
@@ -33,11 +41,11 @@ public class Scoreboard {
         this.toRemove = Lists.newArrayList();
         this.toUpdate = Collections.synchronizedSet(new HashSet<>());
         this.teams = Collections.synchronizedList(Lists.newArrayList());
-        this.title = Util.color(parent.getTitle());
+        this.title = color(parent.getTitle());
     }
 
     public void add(String text, Integer score) {
-        text = Util.color(text);
+        text = color(text);
 
         if (remove(score, text, false) || !values.containsValue(score)) {
             toUpdate.add(text);
@@ -121,7 +129,7 @@ public class Scoreboard {
     }
 
     public void setTitle(String s) {
-        title = Util.color(s);
+        title = color(s);
         if (objective != null) objective.setDisplayName(title);
     }
 
